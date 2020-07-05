@@ -14,28 +14,32 @@ data_dir_train = '../dataset/test_data/train'
 data_dir_val = '../dataset/test_data/eval'
 data_dir_test = '../dataset/test_data/test'
 num_classes = 2
+input_size = 32
 
 
 def load_split_train_val(datadir_train, datadir_val):
-    train_transforms = transforms.Compose([transforms.Resize([32, 32]),
+    train_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
                                            transforms.ToTensor()])
-    val_transforms = transforms.Compose([transforms.Resize([32, 32]),
+    val_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
                                          transforms.ToTensor()])
-    test_transforms = transforms.Compose([transforms.Resize([32, 32]),
+    test_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
                                           transforms.ToTensor()])
 
     train_data = datasets.ImageFolder(datadir_train, transform=train_transforms)
     val_data = datasets.ImageFolder(datadir_val, transform=val_transforms)
-    # test_data = datasets.ImageFolder(data_dir_test, transform=test_transforms)
+    test_data = datasets.ImageFolder(data_dir_test, transform=test_transforms)
+
+    print(train_data.classes)
+    print(train_data.class_to_idx)
 
     train_loader = DataLoader(train_data, batch_size=64)
     val_loader = DataLoader(val_data, batch_size=64)
-    # test_loader = DataLoader(test_data)
+    test_loader = DataLoader(test_data)
 
-    return train_loader, val_loader
+    return train_loader, val_loader, test_loader, train_data.class_to_idx
 
 
-train_loader, val_loader = load_split_train_val(data_dir_train, data_dir_val)
+train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_dir_train, data_dir_val)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = SmallVggNet(num_classes).to(device)
@@ -90,19 +94,25 @@ for epoch in range(1, num_epochs + 1):
     print('Epoch: {} \tTraining Loss: {:.6f} \tValidation Loss: {:.6f} \tValidation Accuracy: {:.6f}'
           .format(epoch, train_loss, val_loss, 100 * correct / total))
 
-# torch.save(model.state_dict(), 'model.ckpt')
+torch.save(model.state_dict(), 'model.ckpt')
 
 # test-the-model
-# model.eval()  # it-disables-dropout
-# with torch.no_grad():
-#     correct = 0
-#     total = 0
-#     for images, labels in val_loader :
-#         images = images.to(device)
-#         labels = labels.to(device)
-#         outputs = model(images)
-#         _, predicted = torch.max(outputs.data, 1)
-#         total += labels.size(0)
-#         correct += (predicted == labels).sum().item()
-#
-#     print('Test Accuracy of the model: {} %'.format(100 * correct / total))
+model.eval()  # it-disables-dropout
+confusion_matrix = torch.zeros(num_classes, num_classes)
+with torch.no_grad():
+    correct = 0
+    total = 0
+    for i, (images, labels) in enumerate(test_loader):
+        images = images.to(device)
+        labels = labels.to(device)
+        outputs = model(images)
+        _, predicted = torch.max(outputs.data, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+        for t, p in zip(labels.view(-1), predicted.view(-1)):
+            confusion_matrix[t.long(), p.long()] += 1
+
+print(confusion_matrix)
+print(labels_idx)
+print(confusion_matrix.diag() / confusion_matrix.sum(1))
+print('Test Accuracy of the model: {} %'.format(100 * correct / total))

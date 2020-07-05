@@ -16,6 +16,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
+import timeit
+
+start = timeit.default_timer()
 
 # Set random seed for reproducibility
 manualSeed = 999
@@ -25,7 +28,7 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
 # Root directory for dataset
-dataroot = "../../dataset/celeba/celeba_subset"
+dataroot = "../../dataset/natural_images/gan_cat"
 
 # Number of workers for dataloader
 workers = 2
@@ -50,7 +53,7 @@ ngf = 64
 ndf = 64
 
 # Number of training epochs
-num_epochs = 100
+num_epochs = 500
 
 # Learning rate for optimizers
 lr = 0.0002
@@ -295,6 +298,10 @@ if __name__ == '__main__':
     # plt.ylabel("Loss")
     # plt.legend()
     # plt.show()
+
+    stop = timeit.default_timer()
+
+    print('Training time: ', stop - start)
 
     # %%capture
     fig = plt.figure(figsize=(8, 8))

@@ -4,6 +4,9 @@
     <list default="true" id="58923f68-12c1-403e-af7a-e9319b74e809" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/SmallVggNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/SmallVggNet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/StraGan.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/StarGan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_baseline.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +19,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+            <state relative-caret-position="171">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/train_baseline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="104" column="31" lean-forward="true" selection-start-line="104" selection-start-column="31" selection-end-line="104" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -30,11 +54,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="319" column="19" selection-start-line="319" selection-start-column="19" selection-end-line="319" selection-end-column="19" />
+            <state relative-caret-position="429">
+              <caret line="323" selection-start-line="323" selection-end-line="323" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -52,22 +76,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/StraGan.py">
+        <entry file="file://$PROJECT_DIR$/model/StarGan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
+            <state relative-caret-position="-3146">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/functional.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36233">
-              <caret line="1920" selection-start-line="1920" selection-end-line="1920" />
             </state>
           </provider>
         </entry>
@@ -84,6 +99,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>lea</find>
+      <find>train</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,19 +113,19 @@
         <option value="$PROJECT_DIR$/model/GANs.py" />
         <option value="$PROJECT_DIR$/dataset_preprocess.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/model/SmallVggNet.py" />
-        <option value="$PROJECT_DIR$/train_baseline.py" />
         <option value="$PROJECT_DIR$/model/StraGan.py" />
         <option value="$PROJECT_DIR$/model/utils.py" />
         <option value="$PROJECT_DIR$/model/GAN.py" />
         <option value="$PROJECT_DIR$/model/cGAN.py" />
         <option value="$PROJECT_DIR$/model/DCGAN.py" />
+        <option value="$PROJECT_DIR$/model/SmallVggNet.py" />
+        <option value="$PROJECT_DIR$/train_baseline.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="415" />
-    <option name="y" value="95" />
+    <option name="x" value="347" />
+    <option name="y" value="60" />
     <option name="width" value="980" />
     <option name="height" value="1050" />
   </component>
@@ -129,10 +145,6 @@
               <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="MSc_Project" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -164,7 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DCGAN">
+  <component name="RunManager" selected="Python.train_baseline">
     <configuration name="DCGAN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -272,9 +284,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train_baseline" />
         <item itemvalue="Python.DCGAN" />
         <item itemvalue="Python.GAN" />
-        <item itemvalue="Python.train_baseline" />
         <item itemvalue="Python.SmallVggNet" />
         <item itemvalue="Python.test" />
       </list>
@@ -294,14 +306,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12417437" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28456375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2181303" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22063038" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -316,28 +329,11 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_baseline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -370,18 +366,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py" />
-    <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
+    <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/functional.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="276">
+          <caret line="1920" selection-start-line="1920" selection-end-line="1920" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/cGAN.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torchvision/transforms/functional.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -390,9 +387,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/StraGan.py">
+    <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="429">
+          <caret line="323" selection-start-line="323" selection-end-line="323" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/StarGan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3146">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -400,19 +417,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36233">
-          <caret line="1920" selection-start-line="1920" selection-end-line="1920" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/model/cGAN.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
+    <entry file="file://$PROJECT_DIR$/train_baseline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="319" column="19" selection-start-line="319" selection-start-column="19" selection-end-line="319" selection-end-column="19" />
+        <state relative-caret-position="236">
+          <caret line="104" column="31" lean-forward="true" selection-start-line="104" selection-start-column="31" selection-end-line="104" selection-end-column="31" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

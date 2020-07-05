@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 
 class SmallVggNet(nn.Module):
-    def __init__(self, num_classes=101):
+    def __init__(self, num_classes=True):
         super(SmallVggNet, self).__init__()
         # self.conv1 = nn.Conv2d(3, 16, kernel_size=(3, 3))
         # self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
