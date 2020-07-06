@@ -28,13 +28,13 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
 # Root directory for dataset
-dataroot = "../../dataset/natural_images/gan_cat"
+dataroot = "../../dataset/The_CNBC_Face_Database/gan_Hispanic"
 
 # Number of workers for dataloader
 workers = 2
 
 # Batch size during training
-batch_size = 128
+batch_size = 32
 
 # Spatial size of training images. All images will be resized to this
 #   size using a transformer.
