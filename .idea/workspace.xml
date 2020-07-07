@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58923f68-12c1-403e-af7a-e9319b74e809" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_split.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/DCGAN_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.ckpt" beforeDir="false" afterPath="$PROJECT_DIR$/model.ckpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_split.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_split.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.ckpt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/train_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_baseline.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,22 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_baseline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="93" column="49" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="49" />
+            <state relative-caret-position="361">
+              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -41,22 +30,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data_split.py">
+        <entry file="file://$PROJECT_DIR$/load_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="331">
+              <caret line="112" column="76" selection-start-line="112" selection-start-column="76" selection-end-line="112" selection-end-column="76" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -65,38 +42,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/cGAN.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
+        <entry file="file://$PROJECT_DIR$/model/DCGAN_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="190">
+              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torchvision/transforms/functional.py">
+        <entry file="file://$PROJECT_DIR$/data_split.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="413" selection-start-line="413" selection-end-line="413" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/StarGan.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="266">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,6 +81,7 @@
       <find>batch_siz</find>
       <find>cuda</find>
       <find>random</find>
+      <find>save</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,14 +102,17 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/model/DCGAN.py" />
         <option value="$PROJECT_DIR$/data_splite.py" />
-        <option value="$PROJECT_DIR$/train_baseline.py" />
+        <option value="$PROJECT_DIR$/model/DCGAN_2.py" />
+        <option value="$PROJECT_DIR$/model/load_data.py" />
         <option value="$PROJECT_DIR$/data_split.py" />
+        <option value="$PROJECT_DIR$/train_baseline.py" />
+        <option value="$PROJECT_DIR$/load_data.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="783" />
-    <option name="y" value="140" />
+    <option name="x" value="637" />
+    <option name="y" value="201" />
     <option name="width" value="980" />
     <option name="height" value="1050" />
   </component>
@@ -161,6 +128,11 @@
             <path>
               <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="MSc_Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MSc_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -191,7 +163,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data_split">
+  <component name="RunManager" selected="Python.train_baseline">
     <configuration name="DCGAN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,7 +185,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="GAN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DCGAN_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -225,7 +197,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\ed\MSc_Project\model\DCGAN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/DCGAN_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,11 +271,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.data_split" />
-        <item itemvalue="Python.DCGAN" />
         <item itemvalue="Python.train_baseline" />
+        <item itemvalue="Python.data_split" />
+        <item itemvalue="Python.DCGAN_2" />
+        <item itemvalue="Python.DCGAN" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.GAN" />
       </list>
     </recent_temporary>
   </component>
@@ -388,12 +360,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
+    <entry file="file://$PROJECT_DIR$/model/cGAN.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torchvision/transforms/functional.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="7809">
+          <caret line="413" selection-start-line="413" selection-end-line="413" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/StarGan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -408,42 +390,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/cGAN.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/StarGan.py">
+    <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="38">
+          <caret line="2" column="20" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torchvision/transforms/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="413" selection-start-line="413" selection-end-line="413" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/model/images/4000.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/4400.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/4800.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/1600.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/6000.png" />
     <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="-378">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_baseline.py">
+    <entry file="file://$PROJECT_DIR$/model/images/400.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/800.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/1200.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/3200.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/0.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/2800.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/7200.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/6800.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/6400.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/7600.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/5200.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/10400.png" />
+    <entry file="file://$PROJECT_DIR$/model/images/11600.png" />
+    <entry file="file://$PROJECT_DIR$/model/load_data.py" />
+    <entry file="file://$PROJECT_DIR$/model/DCGAN_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="93" column="49" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="49" />
+        <state relative-caret-position="190">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -451,9 +439,29 @@
     <entry file="file://$PROJECT_DIR$/data_split.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_baseline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="112" column="76" selection-start-line="112" selection-start-column="76" selection-end-line="112" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

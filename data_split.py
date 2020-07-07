@@ -4,7 +4,7 @@ import glob
 import random
 import numpy as np
 
-label = "Hispanic"
+label = "Asian"
 src_dir = "../dataset/The_CNBC_Face_Database_split/val/" + label
 tar_dir = "../dataset/The_CNBC_Face_Database_split/test/" + label
 

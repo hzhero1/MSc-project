@@ -2,15 +2,11 @@ import shutil
 import numpy as np
 import random
 import torch
-from torch.utils.data import DataLoader
 from torch import nn
 from torch import optim
-import torch.nn.functional as F
-import torchvision
-from torchvision import datasets, transforms, models
 from model.SmallVggNet import SmallVggNet
 import matplotlib.pyplot as plt
-from torch.utils.data.sampler import SubsetRandomSampler
+from load_data import train_val_split, train_val_split_augmentation_traditional, load_split_train_val
 
 manualSeed = 1
 
@@ -24,116 +20,25 @@ torch.backends.cudnn.enabled = False
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-data_dir_train = '../dataset/The_CNBC_Face_Database'
-data_dir_val = '../dataset/test_data/eval'
-data_dir_test = '../dataset/test_data/test'
+model_name = 'model_weights/baseline.ckpt'
+data_dir = '../dataset/The_CNBC_Face_Database'
+
+data_dir_train = '../dataset/The_CNBC_Face_Database_split/train'
+data_dir_val = '../dataset/The_CNBC_Face_Database_split/val'
+data_dir_test = '../dataset/The_CNBC_Face_Database_split/test'
+
+# data_dir_train = '../dataset/test_data/train'
+# data_dir_val = '../dataset/test_data/eval'
+# data_dir_test = '../dataset/test_data/test'
+
 num_classes = 5
 input_size = 32
 batch_size = 128
 
+train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_dir_train, data_dir_val, data_dir_test,
+                                                                         batch_size, input_size)
 
-def train_val_split(datadir, valid_size=0.2, batch_size=64):
-    train_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                           transforms.ToTensor(),
-                                           transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    val_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                         transforms.ToTensor(),
-                                         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    test_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                          transforms.ToTensor(),
-                                          transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-
-    train_data = datasets.ImageFolder(datadir,
-                                      transform=train_transforms)
-    val_data = datasets.ImageFolder(datadir,
-                                    transform=val_transforms)
-    test_data = datasets.ImageFolder(datadir,
-                                     transform=test_transforms)
-
-    num_train = len(train_data)
-    indices = list(range(num_train))
-    split = int(np.floor(valid_size * num_train))
-    np.random.shuffle(indices)
-    train_idx, test_idx = indices[split:], indices[:split]
-    print('train_idx len:', len(train_idx))
-    print('test_idx len:', len(test_idx))
-    train_sampler = SubsetRandomSampler(train_idx)
-    val_sampler = SubsetRandomSampler(test_idx)
-    train_loader = torch.utils.data.DataLoader(train_data,
-                                               sampler=train_sampler, batch_size=batch_size)
-    val_loader = torch.utils.data.DataLoader(val_data,
-                                             sampler=val_sampler, batch_size=batch_size)
-    test_loader = DataLoader(test_data, sampler=val_sampler)
-
-    return train_loader, val_loader, test_loader, train_data.class_to_idx
-
-
-def train_val_split_augmentation_traditional(datadir, valid_size=0.2, batch_size=64):
-    train_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                           torchvision.transforms.RandomHorizontalFlip(),
-                                           torchvision.transforms.RandomRotation(20),
-                                           transforms.ToTensor(),
-                                           transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-                                           ])
-    val_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                         transforms.ToTensor(),
-                                         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    test_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                          transforms.ToTensor(),
-                                          transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-
-    train_data = datasets.ImageFolder(datadir,
-                                      transform=train_transforms)
-    val_data = datasets.ImageFolder(datadir,
-                                    transform=val_transforms)
-    test_data = datasets.ImageFolder(datadir,
-                                     transform=test_transforms)
-
-    num_train = len(train_data)
-    indices = list(range(num_train))
-    split = int(np.floor(valid_size * num_train))
-    np.random.shuffle(indices)
-    train_idx, test_idx = indices[split:], indices[:split]
-    print('train_idx len:', len(train_idx))
-    print('test_idx len:', len(test_idx))
-    train_sampler = SubsetRandomSampler(train_idx)
-    val_sampler = SubsetRandomSampler(test_idx)
-    train_loader = torch.utils.data.DataLoader(train_data,
-                                               sampler=train_sampler, batch_size=batch_size)
-    val_loader = torch.utils.data.DataLoader(val_data,
-                                             sampler=val_sampler, batch_size=batch_size)
-    test_loader = DataLoader(test_data, sampler=val_sampler)
-
-    return train_loader, val_loader, test_loader, train_data.class_to_idx
-
-
-def load_split_train_val(datadir_train, datadir_val, batch_size=64):
-    train_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                           transforms.ToTensor(),
-                                           transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    val_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                         transforms.ToTensor(),
-                                         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    test_transforms = transforms.Compose([transforms.Resize([input_size, input_size]),
-                                          transforms.ToTensor(),
-                                          transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-
-    train_data = datasets.ImageFolder(datadir_train, transform=train_transforms)
-    val_data = datasets.ImageFolder(datadir_val, transform=val_transforms)
-    test_data = datasets.ImageFolder(data_dir_test, transform=test_transforms)
-
-    print(train_data.classes)
-    print(train_data.class_to_idx)
-
-    train_loader = DataLoader(train_data, batch_size=batch_size)
-    val_loader = DataLoader(val_data, batch_size=batch_size)
-    test_loader = DataLoader(test_data)
-
-    return train_loader, val_loader, test_loader, train_data.class_to_idx
-
-
-# train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_dir_train, data_dir_val)
-train_loader, val_loader, test_loader, labels_idx = train_val_split_augmentation_traditional(data_dir_train, 0.2, 64)
+# train_loader, val_loader, test_loader, labels_idx = train_val_split(data_dir, 0.2, batch_size, input_size)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = SmallVggNet(num_classes).to(device)
@@ -187,7 +92,7 @@ for epoch in range(1, num_epochs + 1):
     print('Epoch: {} \tTraining Loss: {:.6f} \tValidation Loss: {:.6f} \tValidation Accuracy: {:.6f}'
           .format(epoch, train_loss, val_loss, 100 * correct / total))
 
-torch.save(model.state_dict(), 'model.ckpt')
+torch.save(model.state_dict(), model_name)
 
 # test-the-model
 model.eval()  # it-disables-dropout
