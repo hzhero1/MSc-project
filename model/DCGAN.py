@@ -30,19 +30,19 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
 # Model name
-model_name = '../model_weights/DCGAN_Asian.ckpt'
+model_name = '../model_weights/DCGAN_Hispanic.ckpt'
 
 # Root directory for dataset
-dataroot = "../../dataset/The_CNBC_Face_Database_split_aug_dcgan/train/gan_Asian"
+dataroot = "../../dataset/The_CNBC_Face_Database_split_aug_dcgan/train/gan_Hispanic"
 
 # Sample interval
-sample_interval = 400
+sample_interval = 100
 
 # Number of workers for dataloader
 workers = 2
 
 # Batch size during training
-batch_size = 64
+batch_size = 32
 
 # Spatial size of training images. All images will be resized to this
 #   size using a transformer.
@@ -61,7 +61,7 @@ ngf = 64
 ndf = 64
 
 # Number of training epochs
-num_epochs = 1000
+num_epochs = 2000
 
 # Learning rate for optimizers
 lr = 0.0002
@@ -229,10 +229,10 @@ if __name__ == '__main__':
     for epoch in range(num_epochs):
         epoch_start = timeit.default_timer()
 
-        try:  # used try so that if user pressed other than the given key error will not be shown
-            if keyboard.is_pressed('!'):  # if key 'q' is pressed
-                print('Stop training, save model...')
-                break  # finishing the loop
+        try:
+            if keyboard.is_pressed('!'):
+                print('Save model, plot training curve...')
+                break
         except:
             break
 
@@ -308,12 +308,15 @@ if __name__ == '__main__':
 
             batches_done = epoch * len(dataloader) + i
             if batches_done % sample_interval == 0:
-                save_image(fake.data[:25], "images/%d.png" % batches_done, nrow=5, normalize=True)
+                save_image(fake.data[:25], "images_Hispanic/%d.png" % batches_done, nrow=5, normalize=True)
+                torch.save(netG.state_dict(), model_name)
 
         epoch_end = timeit.default_timer()
         print('Time(s): ', (epoch_end - epoch_start))
 
     stop = timeit.default_timer()
+
+    print('Total training time(min): ', (stop - start) / 60)
 
     # Save model
     torch.save(netG.state_dict(), model_name)
@@ -327,8 +330,6 @@ if __name__ == '__main__':
     plt.ylabel("Loss")
     plt.legend()
     plt.show()
-
-    print('Total training time(min): ', (stop - start) / 60)
 
     # # %%capture
     # fig = plt.figure(figsize=(8, 8))

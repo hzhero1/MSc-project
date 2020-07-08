@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58923f68-12c1-403e-af7a-e9319b74e809" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/images/Figure_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/images_Hispanic/Figure_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/DCGAN_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/StarGan.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/StarGan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/images/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/model/images/0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,13 +53,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="301" column="84" lean-forward="true" selection-start-line="301" selection-start-column="84" selection-end-line="301" selection-end-column="84" />
+            <state relative-caret-position="228">
+              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/images/100.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -72,18 +77,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
               <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_split.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +156,7 @@
               <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="MSc_Project" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="images_Hispanic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
@@ -179,10 +172,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/model/images_Hispanic" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ed\MSc_Project\model\images_Hispanic" />
+      <recent name="D:\ed\MSc_Project\model\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ed\MSc_Project" />
       <recent name="D:\ed\Project dir" />
@@ -200,7 +197,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DCGAN">
+  <component name="RunManager" selected="Python.test">
     <configuration name="DCGAN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -308,9 +305,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.DCGAN" />
         <item itemvalue="Python.DCGAN_2" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.train_baseline" />
         <item itemvalue="Python.data_augment_traditional" />
       </list>
@@ -331,14 +328,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11756935" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11756935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2181303" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2181303" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,16 +418,6 @@
     <entry file="file://$PROJECT_DIR$/model/images/10400.png" />
     <entry file="file://$PROJECT_DIR$/model/images/11600.png" />
     <entry file="file://$PROJECT_DIR$/model/load_data.py" />
-    <entry file="file://$PROJECT_DIR$/data_split.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_augment_traditional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -459,23 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_baseline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/DCGAN_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="863">
@@ -496,13 +465,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/train_baseline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/images/100.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/images/0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="301" column="84" lean-forward="true" selection-start-line="301" selection-start-column="84" selection-end-line="301" selection-end-column="84" />
+        <state relative-caret-position="228">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
