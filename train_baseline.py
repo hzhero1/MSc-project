@@ -6,7 +6,8 @@ from torch import nn
 from torch import optim
 from model.SmallVggNet import SmallVggNet
 import matplotlib.pyplot as plt
-from load_data import train_val_split, train_val_split_augmentation_traditional, load_split_train_val
+from load_data import train_val_split, train_val_split_augmentation_traditional, load_split_train_val, \
+    load_split_train_val_aug_traditional
 
 manualSeed = 1
 
@@ -23,9 +24,9 @@ torch.backends.cudnn.deterministic = True
 model_name = 'model_weights/baseline.ckpt'
 data_dir = '../dataset/The_CNBC_Face_Database'
 
-data_dir_train = '../dataset/The_CNBC_Face_Database_split/train'
-data_dir_val = '../dataset/The_CNBC_Face_Database_split/val'
-data_dir_test = '../dataset/The_CNBC_Face_Database_split/test'
+data_dir_train = '../dataset/The_CNBC_Face_Database_aug_tra/train'
+data_dir_val = '../dataset/The_CNBC_Face_Database_aug_tra/val'
+data_dir_test = '../dataset/The_CNBC_Face_Database_aug_tra/test'
 
 # data_dir_train = '../dataset/test_data/train'
 # data_dir_val = '../dataset/test_data/eval'
