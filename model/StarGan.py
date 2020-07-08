@@ -25,9 +25,9 @@ parser.add_argument("--b2", type=float, default=0.999, help="adam: decay of firs
 parser.add_argument("--n_cpu", type=int, default=8, help="number of cpu threads to use during batch generation")
 parser.add_argument("--latent_dim", type=int, default=100, help="dimensionality of the latent space")
 parser.add_argument("--n_classes", type=int, default=10, help="number of classes for dataset")
-parser.add_argument("--img_size", type=int, default=32, help="size of each image dimension")
-parser.add_argument("--channels", type=int, default=1, help="number of image channels")
-parser.add_argument("--sample_interval", type=int, default=400, help="interval between image sampling")
+parser.add_argument("--img_size", type=int, default=32, help="size of each images dimension")
+parser.add_argument("--channels", type=int, default=1, help="number of images channels")
+parser.add_argument("--sample_interval", type=int, default=400, help="interval between images sampling")
 opt = parser.parse_args()
 print(opt)
 
@@ -59,7 +59,7 @@ class Generator(nn.Module):
         )
 
     def forward(self, noise, labels):
-        # Concatenate label embedding and image to produce input
+        # Concatenate label embedding and images to produce input
         gen_input = torch.cat((self.label_emb(labels), noise), -1)
         img = self.model(gen_input)
         img = img.view(img.size(0), *img_shape)
@@ -85,7 +85,7 @@ class Discriminator(nn.Module):
         )
 
     def forward(self, img, labels):
-        # Concatenate label embedding and image to produce input
+        # Concatenate label embedding and images to produce input
         d_in = torch.cat((img.view(img.size(0), -1), self.label_embedding(labels)), -1)
         validity = self.model(d_in)
         return validity

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58923f68-12c1-403e-af7a-e9319b74e809" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_augment_traditional.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_weights/baseline.ckpt" beforeDir="false" afterPath="$PROJECT_DIR$/model_weights/baseline.ckpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/DCGAN_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/StarGan.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/StarGan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_baseline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+            <state relative-caret-position="437">
+              <caret line="23" column="41" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="41" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -49,14 +50,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/DCGAN_2.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+            <state relative-caret-position="62">
+              <caret line="301" column="84" lean-forward="true" selection-start-line="301" selection-start-column="84" selection-end-line="301" selection-end-column="84" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/images/0.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -90,6 +105,8 @@
       <find>cuda</find>
       <find>random</find>
       <find>save</find>
+      <find>999</find>
+      <find>Seed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,15 +124,15 @@
         <option value="$PROJECT_DIR$/model/GAN.py" />
         <option value="$PROJECT_DIR$/model/cGAN.py" />
         <option value="$PROJECT_DIR$/model/SmallVggNet.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/model/DCGAN.py" />
         <option value="$PROJECT_DIR$/data_splite.py" />
-        <option value="$PROJECT_DIR$/model/DCGAN_2.py" />
         <option value="$PROJECT_DIR$/model/load_data.py" />
         <option value="$PROJECT_DIR$/data_split.py" />
         <option value="$PROJECT_DIR$/load_data.py" />
         <option value="$PROJECT_DIR$/data_augment_traditional.py" />
         <option value="$PROJECT_DIR$/train_baseline.py" />
+        <option value="$PROJECT_DIR$/model/DCGAN_2.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/model/DCGAN.py" />
       </list>
     </option>
   </component>
@@ -141,6 +158,17 @@
               <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="MSc_Project" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MSc_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MSc_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MSc_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="model_weights" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -172,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train_baseline">
+  <component name="RunManager" selected="Python.DCGAN">
     <configuration name="DCGAN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,7 +264,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data_split" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,7 +276,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_split.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -280,11 +308,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DCGAN" />
+        <item itemvalue="Python.DCGAN_2" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.train_baseline" />
         <item itemvalue="Python.data_augment_traditional" />
-        <item itemvalue="Python.data_split" />
-        <item itemvalue="Python.DCGAN_2" />
-        <item itemvalue="Python.DCGAN" />
       </list>
     </recent_temporary>
   </component>
@@ -309,7 +337,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2181303" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -369,40 +397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/cGAN.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://D:/Softwares/Anaconda3/envs/pytorch/Lib/site-packages/torchvision/transforms/functional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7809">
           <caret line="413" selection-start-line="413" selection-end-line="413" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/StarGan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="20" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -411,21 +409,10 @@
     <entry file="file://$PROJECT_DIR$/model/images/4800.png" />
     <entry file="file://$PROJECT_DIR$/model/images/1600.png" />
     <entry file="file://$PROJECT_DIR$/model/images/6000.png" />
-    <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/images/400.png" />
     <entry file="file://$PROJECT_DIR$/model/images/800.png" />
     <entry file="file://$PROJECT_DIR$/model/images/1200.png" />
     <entry file="file://$PROJECT_DIR$/model/images/3200.png" />
-    <entry file="file://$PROJECT_DIR$/model/images/0.png" />
     <entry file="file://$PROJECT_DIR$/model/images/2800.png" />
     <entry file="file://$PROJECT_DIR$/model/images/7200.png" />
     <entry file="file://$PROJECT_DIR$/model/images/6800.png" />
@@ -435,16 +422,6 @@
     <entry file="file://$PROJECT_DIR$/model/images/10400.png" />
     <entry file="file://$PROJECT_DIR$/model/images/11600.png" />
     <entry file="file://$PROJECT_DIR$/model/load_data.py" />
-    <entry file="file://$PROJECT_DIR$/model/DCGAN_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_split.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -462,6 +439,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/cGAN.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/StarGan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/SmallVggNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="20" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_baseline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/DCGAN_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="205" column="12" selection-start-line="205" selection-start-column="12" selection-end-line="205" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-638">
@@ -472,12 +496,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_baseline.py">
+    <entry file="file://$PROJECT_DIR$/model/images/0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/DCGAN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state relative-caret-position="62">
+          <caret line="301" column="84" lean-forward="true" selection-start-line="301" selection-start-column="84" selection-end-line="301" selection-end-column="84" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

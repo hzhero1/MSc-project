@@ -12,29 +12,37 @@ import torch.utils.data
 import torchvision.datasets as dset
 import torchvision.transforms as transforms
 import torchvision.utils as vutils
+from torchvision.utils import save_image
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
 import timeit
+import keyboard
 
 start = timeit.default_timer()
 
 # Set random seed for reproducibility
 manualSeed = 999
 # manualSeed = random.randint(1, 10000) # use if you want new results
-print("Random Seed: ", manualSeed)
+# print("Random Seed: ", manualSeed)
 random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
+# Model name
+model_name = '../model_weights/DCGAN_Asian.ckpt'
+
 # Root directory for dataset
-dataroot = "../../dataset/The_CNBC_Face_Database/gan_Hispanic"
+dataroot = "../../dataset/The_CNBC_Face_Database_split_aug_dcgan/train/gan_Asian"
+
+# Sample interval
+sample_interval = 400
 
 # Number of workers for dataloader
 workers = 2
 
 # Batch size during training
-batch_size = 32
+batch_size = 64
 
 # Spatial size of training images. All images will be resized to this
 #   size using a transformer.
@@ -53,7 +61,7 @@ ngf = 64
 ndf = 64
 
 # Number of training epochs
-num_epochs = 500
+num_epochs = 1000
 
 # Learning rate for optimizers
 lr = 0.0002
@@ -129,7 +137,7 @@ class Discriminator(nn.Module):
 
 if __name__ == '__main__':
 
-    # We can use an image folder dataset the way we have it setup.
+    # We can use an images folder dataset the way we have it setup.
     # Create the dataset
     dataset = dset.ImageFolder(root=dataroot,
                                transform=transforms.Compose([
@@ -219,8 +227,17 @@ if __name__ == '__main__':
     print("Starting Training Loop...")
     # For each epoch
     for epoch in range(num_epochs):
+        epoch_start = timeit.default_timer()
+
+        try:  # used try so that if user pressed other than the given key error will not be shown
+            if keyboard.is_pressed('!'):  # if key 'q' is pressed
+                print('Stop training, save model...')
+                break  # finishing the loop
+        except:
+            break
+
         # For each batch in the dataloader
-        for i, data in enumerate(dataloader, 0):
+        for i, data in enumerate(dataloader):
 
             ############################
             # (1) Update D network: maximize log(D(x)) + log(1 - D(G(z)))
@@ -242,7 +259,7 @@ if __name__ == '__main__':
             ## Train with all-fake batch
             # Generate batch of latent vectors
             noise = torch.randn(b_size, nz, 1, 1, device=device)
-            # Generate fake image batch with G
+            # Generate fake images batch with G
             fake = netG(noise)
             label.fill_(fake_label)
             # Classify all fake batch with D
@@ -282,49 +299,59 @@ if __name__ == '__main__':
             G_losses.append(errG.item())
             D_losses.append(errD.item())
 
-            # Check how the generator is doing by saving G's output on fixed_noise
-            if (iters % 500 == 0) or ((epoch == num_epochs - 1) and (i == len(dataloader) - 1)):
-                with torch.no_grad():
-                    fake = netG(fixed_noise).detach().cpu()
-                img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
+            # # Check how the generator is doing by saving G's output on fixed_noise
+            # if (iters % 500 == 0) or ((epoch == num_epochs - 1) and (i == len(dataloader) - 1)):
+            #     with torch.no_grad():
+            #         fake = netG(fixed_noise).detach().cpu()
+            #     img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
+            # iters += 1
 
-            iters += 1
+            batches_done = epoch * len(dataloader) + i
+            if batches_done % sample_interval == 0:
+                save_image(fake.data[:25], "images/%d.png" % batches_done, nrow=5, normalize=True)
 
-    # plt.figure(figsize=(10, 5))
-    # plt.title("Generator and Discriminator Loss During Training")
-    # plt.plot(G_losses, label="G")
-    # plt.plot(D_losses, label="D")
-    # plt.xlabel("iterations")
-    # plt.ylabel("Loss")
-    # plt.legend()
-    # plt.show()
+        epoch_end = timeit.default_timer()
+        print('Time(s): ', (epoch_end - epoch_start))
 
     stop = timeit.default_timer()
 
-    print('Training time: ', stop - start)
+    # Save model
+    torch.save(netG.state_dict(), model_name)
 
-    # %%capture
-    fig = plt.figure(figsize=(8, 8))
-    plt.axis("off")
-    ims = [[plt.imshow(np.transpose(i, (1, 2, 0)), animated=True)] for i in img_list]
-    ani = animation.ArtistAnimation(fig, ims, interval=1000, repeat_delay=1000, blit=True)
-
-    HTML(ani.to_jshtml())
-
-    # Grab a batch of real images from the dataloader
-    real_batch = next(iter(dataloader))
-
-    # Plot the real images
-    plt.figure(figsize=(15, 15))
-    plt.subplot(1, 2, 1)
-    plt.axis("off")
-    plt.title("Real Images")
-    plt.imshow(
-        np.transpose(vutils.make_grid(real_batch[0].to(device)[:64], padding=5, normalize=True).cpu(), (1, 2, 0)))
-
-    # Plot the fake images from the last epoch
-    plt.subplot(1, 2, 2)
-    plt.axis("off")
-    plt.title("Fake Images")
-    plt.imshow(np.transpose(img_list[-1], (1, 2, 0)))
+    # Plot training curve
+    plt.figure(figsize=(10, 5))
+    plt.title("Generator and Discriminator Loss During Training")
+    plt.plot(G_losses, label="G")
+    plt.plot(D_losses, label="D")
+    plt.xlabel("iterations")
+    plt.ylabel("Loss")
+    plt.legend()
     plt.show()
+
+    print('Total training time(min): ', (stop - start) / 60)
+
+    # # %%capture
+    # fig = plt.figure(figsize=(8, 8))
+    # plt.axis("off")
+    # ims = [[plt.imshow(np.transpose(i, (1, 2, 0)), animated=True)] for i in img_list]
+    # ani = animation.ArtistAnimation(fig, ims, interval=1000, repeat_delay=1000, blit=True)
+    #
+    # HTML(ani.to_jshtml())
+    #
+    # # Grab a batch of real images from the dataloader
+    # real_batch = next(iter(dataloader))
+    #
+    # # Plot the real images
+    # plt.figure(figsize=(15, 15))
+    # plt.subplot(1, 2, 1)
+    # plt.axis("off")
+    # plt.title("Real Images")
+    # plt.imshow(
+    #     np.transpose(vutils.make_grid(real_batch[0].to(device)[:64], padding=5, normalize=True).cpu(), (1, 2, 0)))
+    #
+    # # Plot the fake images from the last epoch
+    # plt.subplot(1, 2, 2)
+    # plt.axis("off")
+    # plt.title("Fake Images")
+    # plt.imshow(np.transpose(img_list[-1], (1, 2, 0)))
+    # plt.show()
