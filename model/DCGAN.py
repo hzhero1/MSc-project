@@ -30,10 +30,10 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
 # Model name
-model_name = '../model_weights/DCGAN_Hispanic.ckpt'
+model_name = '../model_weights/DCGAN_Black.ckpt'
 
 # Root directory for dataset
-dataroot = "../../dataset/The_CNBC_Face_Database_split_aug_dcgan/train/gan_Hispanic"
+dataroot = "../../dataset/The_CNBC_Face_Database_aug_dcgan/train/gan_Black"
 
 # Sample interval
 sample_interval = 100
@@ -308,7 +308,7 @@ if __name__ == '__main__':
 
             batches_done = epoch * len(dataloader) + i
             if batches_done % sample_interval == 0:
-                save_image(fake.data[:25], "images_Hispanic/%d.png" % batches_done, nrow=5, normalize=True)
+                save_image(fake.data[:25], "images_Black/%d.png" % batches_done, nrow=5, normalize=True)
                 torch.save(netG.state_dict(), model_name)
 
         epoch_end = timeit.default_timer()
