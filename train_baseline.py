@@ -6,7 +6,7 @@ from torch import nn
 from torch import optim
 from model.SmallVggNet import SmallVggNet
 import matplotlib.pyplot as plt
-from load_data import train_val_split, train_val_split_augmentation_traditional, load_split_train_val, \
+from data_loader import train_val_split, train_val_split_augmentation_traditional, load_split_train_val, \
     load_split_train_val_aug_traditional
 
 manualSeed = 1
