@@ -24,15 +24,15 @@ torch.backends.cudnn.deterministic = True
 model_name = 'model_weights/baseline.ckpt'
 data_dir = '../dataset/The_CNBC_Face_Database'
 
-data_dir_train = '../dataset/The_CNBC_Face_Database_aug_tra/train'
-data_dir_val = '../dataset/The_CNBC_Face_Database_aug_tra/val'
-data_dir_test = '../dataset/The_CNBC_Face_Database_aug_tra/test'
+data_dir_train = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/train'
+data_dir_val = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/val'
+data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test'
 
 # data_dir_train = '../dataset/test_data/train'
 # data_dir_val = '../dataset/test_data/eval'
 # data_dir_test = '../dataset/test_data/test'
 
-num_classes = 5
+num_classes = 4
 input_size = 32
 batch_size = 128
 
