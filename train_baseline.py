@@ -24,19 +24,23 @@ torch.backends.cudnn.deterministic = True
 model_name = 'model_weights/baseline.ckpt'
 data_dir = '../dataset/The_CNBC_Face_Database'
 
-data_dir_train = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/train'
-data_dir_val = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/val'
-data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test'
+# data_dir_train = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/train'
+# data_dir_val = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/val'
+# data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test'
 
 # data_dir_train = '../dataset/test_data/train'
 # data_dir_val = '../dataset/test_data/eval'
 # data_dir_test = '../dataset/test_data/test'
 
+data_dir_train = "../dataset/celeba/celeba_subset/hair_color/train/"
+data_dir_val = "../dataset/celeba/celeba_subset/hair_color/val/"
+data_dir_test = "../dataset/celeba/celeba_subset/hair_color/val/"
+
 num_classes = 4
 input_size = 32
 batch_size = 128
 
-train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_dir_train, data_dir_val, data_dir_test,
+train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_dir_train, data_dir_val, data_dir_val,
                                                                          batch_size, input_size)
 
 # train_loader, val_loader, test_loader, labels_idx = train_val_split(data_dir, 0.2, batch_size, input_size)
