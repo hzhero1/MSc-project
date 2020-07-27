@@ -24,17 +24,17 @@ torch.backends.cudnn.deterministic = True
 model_name = 'model_weights/baseline.ckpt'
 data_dir = '../dataset/The_CNBC_Face_Database'
 
-# data_dir_train = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/train'
-# data_dir_val = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/val'
-# data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test'
+data_dir_train = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/train'
+data_dir_val = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/val'
+data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test'
 
 # data_dir_train = '../dataset/test_data/train'
 # data_dir_val = '../dataset/test_data/eval'
 # data_dir_test = '../dataset/test_data/test'
 
-data_dir_train = "../dataset/celeba/celeba_subset/hair_color/train/"
-data_dir_val = "../dataset/celeba/celeba_subset/hair_color/val/"
-data_dir_test = "../dataset/celeba/celeba_subset/hair_color/val/"
+# data_dir_train = "../dataset/celeba/celeba_subset/hair_color/train/"
+# data_dir_val = "../dataset/celeba/celeba_subset/hair_color/val/"
+# data_dir_test = "../dataset/celeba/celeba_subset/hair_color/val/"
 
 num_classes = 4
 input_size = 32
@@ -115,7 +115,14 @@ with torch.no_grad():
         for t, p in zip(labels.view(-1), predicted.view(-1)):
             confusion_matrix[t.long(), p.long()] += 1
 
-print(confusion_matrix)
-print('\nclasses:', labels_idx)
-print(confusion_matrix.diag() / confusion_matrix.sum(1))
+print('\n-----------------------\nEvaluation on test data\n-----------------------')
+print('Confusion matrix:\n', confusion_matrix)
+print('\nPer class evaluation: ')
+print('{:15}{}'.format('Classes', labels_idx))
+precision = torch.true_divide(confusion_matrix.diag(), confusion_matrix.sum(0))
+recall = torch.true_divide(confusion_matrix.diagonal(), confusion_matrix.sum(1))
+print('{:15}{}'.format('Precision', precision))
+print('{:15}{}'.format('Recall', recall))
+print('{:15}{}'.format('F1 Score', torch.true_divide(2 * precision * recall, precision + recall)))
+print('Accuracy: ', torch.true_divide(confusion_matrix.diagonal().sum(), confusion_matrix.sum()))
 print('\nTest Accuracy of the model: {} %'.format(100 * correct / total))

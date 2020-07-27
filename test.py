@@ -1,12 +1,20 @@
-import keyboard
+import torch
+import numpy as np
 
-while True:  # making a loop
-    print(1)
-    try:  # used try so that if user pressed other than the given key error will not be shown
-        if keyboard.is_pressed('!'):  # if key 'q' is pressed
-            print('You Pressed A Key!')
-            break
-    except:
-        break  # if user pressed a key other than the given key the loop will break
-
-print('end')
+t = torch.tensor([[1, 2, 3], [2, 3, 4], [4, 4, 5]])
+# print(t.diagonal().sum())
+# print(t.sum())
+print(t)
+print(t.diagonal())
+# print(t.diagonal() / t.sum(0))
+# print(t.diagonal() / t.sum(1))
+print(t.sum(0))
+print(t.sum(1))
+# print(t.sum(0))
+# print(t.sum(1))
+print(t.sum(0) + t.sum(1))
+print(t.sum(0) * t.sum(1))
+print((torch.true_divide(t.sum(0) + t.sum(1), (t.sum(0) * t.sum(1)))))
+# print('\n-----------------------\nEvaluation on test data\n-----------------------')
+# print('{:20}{}'.format('1', 2))
+# print()
