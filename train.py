@@ -25,22 +25,26 @@ torch.backends.cudnn.deterministic = True
 model_name = 'model_weights/baseline.ckpt'
 data_dir = '../dataset/The_CNBC_Face_Database'
 
-data_dir_train = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/train'
-data_dir_val = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/val'
-data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test'
+# data_dir_train = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/train'
+# data_dir_val = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/val'
+# data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test'
 
 # data_dir_train = '../dataset/test_data/train'
 # data_dir_val = '../dataset/test_data/eval'
 # data_dir_test = '../dataset/test_data/test'
 
-# data_dir_train = "../dataset/celeba/celeba_subset/hair_color/train/"
-# data_dir_val = "../dataset/celeba/celeba_subset/hair_color/val/"
-# data_dir_test = "../dataset/celeba/celeba_subset/hair_color/val/"
+attribute_name = 'hair_color'
 
+# CelebA
+data_dir_train = "../dataset/celeba/celeba_subset/" + attribute_name + "/train/"
+data_dir_val = "../dataset/celeba/celeba_subset/" + attribute_name + "/val/"
+data_dir_test = "../dataset/celeba/celeba_subset/" + attribute_name + "/test/"
+
+# Losses directory
 loss_train_dir = "loss/loss_train.txt"
 loss_val_dir = "loss/loss_val.txt"
 
-num_classes = 4
+num_classes = 3
 input_size = 32
 batch_size = 128
 
@@ -124,7 +128,7 @@ with torch.no_grad():
         for t, p in zip(labels.view(-1), predicted.view(-1)):
             confusion_matrix[t.long(), p.long()] += 1
 
-print('\n-----------------------\nEvaluation on test data\n-------------l----------')
+print('\n-----------------------\nEvaluation on test data\n-----------------------')
 print('Confusion matrix:\n', confusion_matrix)
 print('\nPer class evaluation: ')
 print('{:15}{}'.format('Classes', labels_idx))

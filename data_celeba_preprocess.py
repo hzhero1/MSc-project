@@ -9,7 +9,7 @@ path_attr_celeba = '../dataset/celeba/list_attr_celeba.txt'
 feature = 'Gray_Hair'
 celeba_subset_src = "../dataset/celeba/celeba_subset/subset"
 folder_pos = '../dataset/celeba/celeba_subset/hair_color/Gray_Hair'
-folder_neg = ''
+# folder_neg = '../dataset/celeba/celeba_subset/gender/female'
 images_list = glob.glob(celeba_subset_src + '/*.jpg')
 
 attr_list = pd.read_csv(path_attr_celeba, delim_whitespace=True)
@@ -22,12 +22,12 @@ for image in images_list:
         # move image to positive folder
         if not os.path.exists(folder_pos):
             os.makedirs(folder_pos)
-        shutil.move(image, folder_pos + '/' + file_name)
+        shutil.copy(image, folder_pos + '/' + file_name)
     # else:
     #     # move image to negative folder
     #     if not os.path.exists(folder_neg):
     #         os.makedirs(folder_neg)
-    #     shutil.move(image, folder_neg + '/' + file_name)
+    #     shutil.copy(image, folder_neg + '/' + file_name)
 
 # print(attr_list[feature]['000010.jpg'])
 
