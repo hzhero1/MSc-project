@@ -4,7 +4,7 @@ import glob
 import random
 import numpy as np
 
-label = "Black_Hair"
+label = "Gray_Hair"
 src_dir = "../dataset/celeba/celeba_subset/hair_color/val/" + label
 tar_dir = "../dataset/celeba/celeba_subset/hair_color/test/" + label
 

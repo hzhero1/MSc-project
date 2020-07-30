@@ -2,6 +2,7 @@ import torch
 import numpy as np
 
 t = torch.tensor([[1, 2, 3], [2, 3, 4], [4, 4, 5]])
+t = t.float()
 # print(t.diagonal().sum())
 # print(t.sum())
 print(t)
@@ -14,7 +15,7 @@ print(t.sum(1))
 # print(t.sum(1))
 print(t.sum(0) + t.sum(1))
 print(t.sum(0) * t.sum(1))
-print((torch.true_divide(t.sum(0) + t.sum(1), (t.sum(0) * t.sum(1)))))
+print((torch.div(t.sum(0) + t.sum(1), (t.sum(0) * t.sum(1)))))
 # print('\n-----------------------\nEvaluation on test data\n-----------------------')
 # print('{:20}{}'.format('1', 2))
 # print()

@@ -1,0 +1,18 @@
+1. no augmentation
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[352.,   7.,   4.],
+        [  7., 201.,  12.],
+        [  5.,  13.,  38.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9670, 0.9095, 0.7037])
+Recall         tensor([0.9697, 0.9136, 0.6786])
+F1 Score       tensor([0.9684, 0.9116, 0.6909])
+
+Test Accuracy of the model: 92.48826291079813 %
+
+Process finished with exit code 0
+
