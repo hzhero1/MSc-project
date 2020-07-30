@@ -6,6 +6,7 @@ from torch import nn
 from torch import optim
 from model.SmallVggNet import SmallVggNet
 import matplotlib.pyplot as plt
+import pickle
 from data_loader import train_val_split, train_val_split_augmentation_traditional, load_split_train_val, \
     load_split_train_val_aug_traditional
 
@@ -35,6 +36,9 @@ data_dir_test = '../dataset/CNBC_4_classes/The_CNBC_Face_Database_aug_dcgan/test
 # data_dir_train = "../dataset/celeba/celeba_subset/hair_color/train/"
 # data_dir_val = "../dataset/celeba/celeba_subset/hair_color/val/"
 # data_dir_test = "../dataset/celeba/celeba_subset/hair_color/val/"
+
+loss_train_dir = "loss/loss_train.txt"
+loss_val_dir = "loss/loss_val.txt"
 
 num_classes = 4
 input_size = 32
@@ -99,6 +103,11 @@ for epoch in range(1, num_epochs + 1):
 
 torch.save(model.state_dict(), model_name)
 
+with open(loss_train_dir, "wb") as f:
+    pickle.dump(train_losses, f)
+with open(loss_val_dir, "wb") as f:
+    pickle.dump(val_losses, f)
+
 # test-the-model
 model.eval()  # it-disables-dropout
 confusion_matrix = torch.zeros(num_classes, num_classes)
@@ -115,7 +124,7 @@ with torch.no_grad():
         for t, p in zip(labels.view(-1), predicted.view(-1)):
             confusion_matrix[t.long(), p.long()] += 1
 
-print('\n-----------------------\nEvaluation on test data\n-----------------------')
+print('\n-----------------------\nEvaluation on test data\n-------------l----------')
 print('Confusion matrix:\n', confusion_matrix)
 print('\nPer class evaluation: ')
 print('{:15}{}'.format('Classes', labels_idx))
