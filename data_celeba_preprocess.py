@@ -5,7 +5,7 @@ import random
 import numpy as np
 import pandas as pd
 
-path_attr_celeba = '../dataset/celeba/list_attr_celeba.txt'
+path_attr_celeba = 'list_attr_celeba.txt'
 feature = 'Gray_Hair'
 celeba_subset_src = "../dataset/celeba/celeba_subset/subset"
 folder_pos = '../dataset/celeba/celeba_subset/hair_color/Gray_Hair'
