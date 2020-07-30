@@ -14,5 +14,25 @@ F1 Score       tensor([0.9684, 0.9116, 0.6909])
 
 Test Accuracy of the model: 92.48826291079813 %
 
+2. traditional augmentation
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[350.,   8.,   5.],
+        [  3., 203.,  14.],
+        [  4.,  12.,  40.]])
+
+Per class evaluation:
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9804, 0.9103, 0.6780])
+Recall         tensor([0.9642, 0.9227, 0.7143])
+F1 Score       tensor([0.9722, 0.9165, 0.6957])
+
+Test Accuracy of the model: 92.80125195618153 %
+
+Process finished with exit code 0
+
+
 Process finished with exit code 0
 

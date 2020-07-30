@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="58923f68-12c1-403e-af7a-e9319b74e809" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Project dir.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project dir.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loss/loss_train_celeba_tra.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loss/loss_val_celeba_tra.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_weights/DCGAN_Blond_Hair.ckpt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_split.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_split.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loss/loss_train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loss/loss_train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loss/loss_val.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loss/loss_val.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/celeba_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/celeba_result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_augmentation/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_augmentation/DCGAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_augmentation/traditional.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_augmentation/traditional.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/images/6600.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/images/6700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/images/6800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/images/6900.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/images/7000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/images/Figure_1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/model_weights/baseline.ckpt" beforeDir="false" afterPath="$PROJECT_DIR$/model_weights/baseline.ckpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,19 +50,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>lea</find>
-      <find>train</find>
-      <find>batch_siz</find>
-      <find>random</find>
-      <find>save</find>
-      <find>999</find>
-      <find>Seed</find>
-      <find>cuda</find>
-      <find>fake</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,11 +60,15 @@
     <option name="height" value="1050" />
   </component>
   <component name="ProjectId" id="1fOD3GYShwjIQLfDuGVoFepNgU9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -69,8 +86,8 @@
       <recent name="D:\ed\MSc_Project\model\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train">
-    <configuration name="data_celeba_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.DCGAN">
+    <configuration name="DCGAN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,11 +95,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_celeba_preprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/DCGAN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,27 +129,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plot_learning_curve" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Project dir" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_learning_curve.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,6 +142,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="traditional" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Project dir" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_augmentation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_augmentation/traditional.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DCGAN" />
         <item itemvalue="Python.train" />
+        <item itemvalue="Python.traditional" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.data_split" />
-        <item itemvalue="Python.data_celeba_preprocess" />
-        <item itemvalue="Python.plot_learning_curve" />
       </list>
     </recent_temporary>
   </component>
@@ -199,22 +216,36 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="979" height="161" key="GridCell.Tab.0.bottom" timestamp="1596081763368">
+    <state width="979" height="161" key="GridCell.Tab.0.bottom" timestamp="1596103305527">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="161" key="GridCell.Tab.0.bottom/0.24.1024.720@0.24.1024.720" timestamp="1596081763368" />
-    <state width="979" height="161" key="GridCell.Tab.0.center" timestamp="1596081763366">
+    <state width="979" height="161" key="GridCell.Tab.0.bottom/0.24.1024.720@0.24.1024.720" timestamp="1596103305527" />
+    <state width="979" height="161" key="GridCell.Tab.0.center" timestamp="1596103305526">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="161" key="GridCell.Tab.0.center/0.24.1024.720@0.24.1024.720" timestamp="1596081763366" />
-    <state width="979" height="161" key="GridCell.Tab.0.left" timestamp="1596081763366">
+    <state width="979" height="161" key="GridCell.Tab.0.center/0.24.1024.720@0.24.1024.720" timestamp="1596103305526" />
+    <state width="979" height="161" key="GridCell.Tab.0.left" timestamp="1596103305525">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="161" key="GridCell.Tab.0.left/0.24.1024.720@0.24.1024.720" timestamp="1596081763366" />
-    <state width="979" height="161" key="GridCell.Tab.0.right" timestamp="1596081763367">
+    <state width="979" height="161" key="GridCell.Tab.0.left/0.24.1024.720@0.24.1024.720" timestamp="1596103305525" />
+    <state width="979" height="161" key="GridCell.Tab.0.right" timestamp="1596103305527">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="161" key="GridCell.Tab.0.right/0.24.1024.720@0.24.1024.720" timestamp="1596081763367" />
+    <state width="979" height="161" key="GridCell.Tab.0.right/0.24.1024.720@0.24.1024.720" timestamp="1596103305527" />
   </component>
 </project>

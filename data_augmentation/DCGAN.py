@@ -5,7 +5,7 @@ from torchvision.utils import save_image
 num_image = 2006
 noise_size = 100
 ngpu = 1
-model_dir = '../model_weights/DCGAN_Multiracial.ckpt'
+model_dir = '../model_weights/DCGAN_Blond_Hair.ckpt'
 target_dir = '../../dataset/The_CNBC_Face_Database_aug_dcgan/train/Multiracial/'
 
 device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")

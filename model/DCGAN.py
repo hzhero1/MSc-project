@@ -16,7 +16,7 @@ from torchvision.utils import save_image
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from IPython.display import HTML
+# from IPython.display import HTML
 import timeit
 import keyboard
 
@@ -30,11 +30,13 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
 # Model name
-model_name = '../model_weights/DCGAN_Black.ckpt'
+model_name = '../model_weights/DCGAN_Blond_Hair.ckpt'
 
 # Root directory for dataset
-dataroot = "../../dataset/The_CNBC_Face_Database_aug_dcgan/train/gan_Black"
+dataroot = "/home/hzhero23/dataset/celeba/celeba_subset/hair_color_DCGAN_aug/train/gan_blond"
 
+# Images folder
+image_folder = 'images_blond'
 # Sample interval
 sample_interval = 100
 
@@ -42,7 +44,7 @@ sample_interval = 100
 workers = 2
 
 # Batch size during training
-batch_size = 32
+batch_size = 128
 
 # Spatial size of training images. All images will be resized to this
 #   size using a transformer.
@@ -229,12 +231,12 @@ if __name__ == '__main__':
     for epoch in range(num_epochs):
         epoch_start = timeit.default_timer()
 
-        try:
-            if keyboard.is_pressed('!'):
-                print('Save model, plot training curve...')
-                break
-        except:
-            break
+        # try:
+        #     if keyboard.is_pressed('!'):
+        #         print('Save model, plot training curve...')
+        #         break
+        # except:
+        #     break
 
         # For each batch in the dataloader
         for i, data in enumerate(dataloader):
@@ -308,7 +310,7 @@ if __name__ == '__main__':
 
             batches_done = epoch * len(dataloader) + i
             if batches_done % sample_interval == 0:
-                save_image(fake.data[:25], "images_Black/%d.png" % batches_done, nrow=5, normalize=True)
+                save_image(fake.data[:25], image_folder + "/%d.png" % batches_done, nrow=5, normalize=True)
                 torch.save(netG.state_dict(), model_name)
 
         epoch_end = timeit.default_timer()

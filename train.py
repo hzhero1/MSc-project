@@ -33,7 +33,7 @@ data_dir = '../dataset/The_CNBC_Face_Database'
 # data_dir_val = '../dataset/test_data/eval'
 # data_dir_test = '../dataset/test_data/test'
 
-attribute_name = 'hair_color'
+attribute_name = 'hair_color_tra_aug'
 
 # CelebA
 data_dir_train = "../dataset/celeba/celeba_subset/" + attribute_name + "/train/"
@@ -41,8 +41,8 @@ data_dir_val = "../dataset/celeba/celeba_subset/" + attribute_name + "/val/"
 data_dir_test = "../dataset/celeba/celeba_subset/" + attribute_name + "/test/"
 
 # Losses directory
-loss_train_dir = "loss/loss_train.txt"
-loss_val_dir = "loss/loss_val.txt"
+loss_train_dir = "loss/loss_train_celeba_tra.txt"
+loss_val_dir = "loss/loss_val_celeba_tra.txt"
 
 num_classes = 3
 input_size = 32
