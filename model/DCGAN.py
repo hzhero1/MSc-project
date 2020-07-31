@@ -30,13 +30,13 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
 # Model name
-model_name = '../model_weights/DCGAN_Blond_Hair.ckpt'
+model_name = '../model_weights/DCGAN_Gray_Hair.ckpt'
 
 # Root directory for dataset
-dataroot = "/home/hzhero23/dataset/celeba/celeba_subset/hair_color_DCGAN_aug/train/gan_blond"
+dataroot = "/home/hzhero23/dataset/celeba/celeba_subset/hair_color_DCGAN_aug/train/gan_gray"
 
 # Images folder
-image_folder = 'images_blond'
+image_folder = 'images_gray'
 # Sample interval
 sample_interval = 100
 
@@ -312,6 +312,15 @@ if __name__ == '__main__':
             if batches_done % sample_interval == 0:
                 save_image(fake.data[:25], image_folder + "/%d.png" % batches_done, nrow=5, normalize=True)
                 torch.save(netG.state_dict(), model_name)
+
+                plt.figure(figsize=(10, 5))
+                plt.title("Generator and Discriminator Loss During Training")
+                plt.plot(G_losses, label="G")
+                plt.plot(D_losses, label="D")
+                plt.xlabel("iterations")
+                plt.ylabel("Loss")
+                plt.legend()
+                plt.savefig(image_folder)
 
         epoch_end = timeit.default_timer()
         print('Time(s): ', (epoch_end - epoch_start))
