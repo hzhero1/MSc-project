@@ -2,11 +2,11 @@ import torch
 from model.DCGAN import Generator
 from torchvision.utils import save_image
 
-num_image = 2006
+num_image = 1434
 noise_size = 100
 ngpu = 1
-model_dir = '../model_weights/DCGAN_Blond_Hair.ckpt'
-target_dir = '../../dataset/The_CNBC_Face_Database_aug_dcgan/train/Multiracial/'
+model_dir = '../model_weights/DCGAN_Gray_Hair.ckpt'
+target_dir = '/home/hzhero23/dataset/celeba/celeba_subset/hair_color_DCGAN_aug/train/Gray_Hair/'
 
 device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")
 

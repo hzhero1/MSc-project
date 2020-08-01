@@ -31,8 +31,21 @@ F1 Score       tensor([0.9722, 0.9165, 0.6957])
 
 Test Accuracy of the model: 92.80125195618153 %
 
-Process finished with exit code 0
+3. DCGAN
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[343.,   7.,  13.],
+        [  3., 196.,  21.],
+        [  3.,   9.,  44.]])
 
+Per class evaluation:
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9828, 0.9245, 0.5641])
+Recall         tensor([0.9449, 0.8909, 0.7857])
+F1 Score       tensor([0.9635, 0.9074, 0.6567])
 
-Process finished with exit code 0
+Test Accuracy of the model: 91.23630672926447 %
+
 

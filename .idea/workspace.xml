@@ -20,70 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58923f68-12c1-403e-af7a-e9319b74e809" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/images_blond/10800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_blond/10900.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_blond/11000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_blond/11100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_blond/11200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_blond/11300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_blond/images_blond.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/1900.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/2900.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/3900.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/4900.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/5000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/700.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/images_gray/900.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loss/loss_train_celeba_DCGAN.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loss/loss_val_celeba_DCGAN.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_augmentation/traditional.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_augmentation/traditional.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/DCGAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/images_blond/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/images_blond/100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_weights/DCGAN_Blond_Hair.ckpt" beforeDir="false" afterPath="$PROJECT_DIR$/model_weights/DCGAN_Blond_Hair.ckpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/celeba_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/celeba_result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_augmentation/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_augmentation/DCGAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_weights/baseline.ckpt" beforeDir="false" afterPath="$PROJECT_DIR$/model_weights/baseline.ckpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +76,28 @@
       <recent name="D:\ed\MSc_Project\model\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.DCGAN">
+  <component name="RunManager" selected="Python.train">
+    <configuration name="DCGAN (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Project dir" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_augmentation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_augmentation/DCGAN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="DCGAN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,27 +111,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/DCGAN.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="data_split" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Project dir" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_split.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.DCGAN (1)" />
         <item itemvalue="Python.DCGAN" />
         <item itemvalue="Python.traditional" />
-        <item itemvalue="Python.train" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.data_split" />
       </list>
     </recent_temporary>
   </component>
@@ -279,21 +222,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="979" height="208" key="GridCell.Tab.0.bottom" timestamp="1596171538088">
+    <state width="979" height="208" key="GridCell.Tab.0.bottom" timestamp="1596249411624">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.bottom/0.24.1024.720@0.24.1024.720" timestamp="1596171538088" />
-    <state width="979" height="208" key="GridCell.Tab.0.center" timestamp="1596171538087">
+    <state width="979" height="208" key="GridCell.Tab.0.bottom/0.24.1024.720@0.24.1024.720" timestamp="1596249411624" />
+    <state width="979" height="208" key="GridCell.Tab.0.center" timestamp="1596249411623">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.center/0.24.1024.720@0.24.1024.720" timestamp="1596171538087" />
-    <state width="979" height="208" key="GridCell.Tab.0.left" timestamp="1596171538086">
+    <state width="979" height="208" key="GridCell.Tab.0.center/0.24.1024.720@0.24.1024.720" timestamp="1596249411623" />
+    <state width="979" height="208" key="GridCell.Tab.0.left" timestamp="1596249411622">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.left/0.24.1024.720@0.24.1024.720" timestamp="1596171538086" />
-    <state width="979" height="208" key="GridCell.Tab.0.right" timestamp="1596171538088">
+    <state width="979" height="208" key="GridCell.Tab.0.left/0.24.1024.720@0.24.1024.720" timestamp="1596249411622" />
+    <state width="979" height="208" key="GridCell.Tab.0.right" timestamp="1596249411623">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.right/0.24.1024.720@0.24.1024.720" timestamp="1596171538088" />
+    <state width="979" height="208" key="GridCell.Tab.0.right/0.24.1024.720@0.24.1024.720" timestamp="1596249411623" />
   </component>
 </project>
