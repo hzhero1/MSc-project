@@ -4,10 +4,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
 
-model_dir = '../../CelebA_cDCGAN_generator_param.pkl'
-target_dir = '../../cdcgan_fake/'
+model_dir = '/home/hzhero23/CelebA_cDCGAN_results/CelebA_cDCGAN_generator_param.pkl'
+target_dir = '/home/hzhero23/dataset/celeba/celeba_subset/hair_color_cdcgan_aug/train/Gray_Hair/'
 
-num_images = 20
+num_images = 1434
 
 class generator(nn.Module):
     # initializers
