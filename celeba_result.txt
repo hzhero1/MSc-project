@@ -48,4 +48,22 @@ F1 Score       tensor([0.9635, 0.9074, 0.6567])
 
 Test Accuracy of the model: 91.23630672926447 %
 
+4. Cyclegan
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[349.,   5.,   9.],
+        [  3., 210.,   7.],
+        [  4.,   7.,  45.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9803, 0.9459, 0.7377])
+Recall         tensor([0.9614, 0.9545, 0.8036])
+F1 Score       tensor([0.9708, 0.9502, 0.7692])
+
+Test Accuracy of the model: 94.5226917057903 %
+
+
 

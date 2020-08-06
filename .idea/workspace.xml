@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58923f68-12c1-403e-af7a-e9319b74e809" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/loss/loss_train_celeba_DCGAN.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loss/loss_val_celeba_DCGAN.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/celebA_data_preprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/celeba_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/celeba_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_augmentation/DCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_augmentation/DCGAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_weights/baseline.ckpt" beforeDir="false" afterPath="$PROJECT_DIR$/model_weights/baseline.ckpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_augmentation/traditional.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_augmentation/traditional.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytorch_CelebA_cDCGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch_CelebA_cDCGAN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +39,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="488" />
-    <option name="y" value="27" />
-    <option name="width" value="980" />
-    <option name="height" value="1050" />
   </component>
   <component name="ProjectId" id="1fOD3GYShwjIQLfDuGVoFepNgU9" />
   <component name="ProjectLevelVcsManager">
@@ -76,7 +67,7 @@
       <recent name="D:\ed\MSc_Project\model\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.traditional">
     <configuration name="DCGAN (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="celebA_data_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,7 +122,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/celebA_data_preprocess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.traditional" />
+        <item itemvalue="Python.celebA_data_preprocess" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.DCGAN (1)" />
         <item itemvalue="Python.DCGAN" />
-        <item itemvalue="Python.traditional" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -222,21 +213,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="979" height="208" key="GridCell.Tab.0.bottom" timestamp="1596249411624">
+    <state width="976" height="139" key="GridCell.Tab.0.bottom" timestamp="1596634118456">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.bottom/0.24.1024.720@0.24.1024.720" timestamp="1596249411624" />
-    <state width="979" height="208" key="GridCell.Tab.0.center" timestamp="1596249411623">
+    <state width="976" height="139" key="GridCell.Tab.0.bottom/0.24.1024.720@0.24.1024.720" timestamp="1596634118456" />
+    <state width="976" height="139" key="GridCell.Tab.0.center" timestamp="1596634118455">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.center/0.24.1024.720@0.24.1024.720" timestamp="1596249411623" />
-    <state width="979" height="208" key="GridCell.Tab.0.left" timestamp="1596249411622">
+    <state width="976" height="139" key="GridCell.Tab.0.center/0.24.1024.720@0.24.1024.720" timestamp="1596634118455" />
+    <state width="976" height="139" key="GridCell.Tab.0.left" timestamp="1596634118455">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.left/0.24.1024.720@0.24.1024.720" timestamp="1596249411622" />
-    <state width="979" height="208" key="GridCell.Tab.0.right" timestamp="1596249411623">
+    <state width="976" height="139" key="GridCell.Tab.0.left/0.24.1024.720@0.24.1024.720" timestamp="1596634118455" />
+    <state width="976" height="139" key="GridCell.Tab.0.right" timestamp="1596634118456">
       <screen x="0" y="24" width="1024" height="720" />
     </state>
-    <state width="979" height="208" key="GridCell.Tab.0.right/0.24.1024.720@0.24.1024.720" timestamp="1596249411623" />
+    <state width="976" height="139" key="GridCell.Tab.0.right/0.24.1024.720@0.24.1024.720" timestamp="1596634118456" />
   </component>
 </project>

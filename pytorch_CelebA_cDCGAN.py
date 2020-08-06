@@ -218,7 +218,7 @@ def show_noise_morp(show=False, save=False, path='result.png'):
 # training parameters
 batch_size = 128
 lr = 0.0002
-train_epoch = 20
+train_epoch = 2000
 
 # data_loader
 isCrop = False
@@ -233,10 +233,10 @@ else:
         transforms.ToTensor(),
         transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))
     ])
-data_dir = 'data/resized_celebA/celebA/'  # this path depends on your computer
+data_dir = '../dataset/resized_celebA/celebA/'  # this path depends on your computer
 dset = datasets.ImageFolder(data_dir, transform)
 dset.imgs.sort()
-train_loader = torch.utils.data.DataLoader(dset, batch_size=128, shuffle=True)
+train_loader = torch.utils.data.DataLoader(dset, batch_size=batch_size, shuffle=True)
 temp = plt.imread(train_loader.dataset.imgs[0][0])
 if (temp.shape[0] != img_size) or (temp.shape[0] != img_size):
     sys.stderr.write('Error! image size is not 64 x 64! run \"celebA_data_preprocess.py\" !!!')

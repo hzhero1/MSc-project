@@ -33,7 +33,7 @@ model_name = 'model_weights/baseline.ckpt'
 # data_dir_val = '../dataset/test_data/eval'
 # data_dir_test = '../dataset/test_data/test'
 
-attribute_name = 'hair_color_DCGAN_aug'
+attribute_name = 'hair_color_cyclegan_aug'
 
 # CelebA
 data_dir_train = "../dataset/celeba/celeba_subset/" + attribute_name + "/train/"
@@ -41,8 +41,8 @@ data_dir_val = "../dataset/celeba/celeba_subset/" + attribute_name + "/val/"
 data_dir_test = "../dataset/celeba/celeba_subset/" + attribute_name + "/test/"
 
 # Losses directory
-loss_train_dir = "loss/loss_train_celeba_DCGAN.txt"
-loss_val_dir = "loss/loss_val_celeba_DCGAN.txt"
+loss_train_dir = "loss/loss_train_celeba_CycleGAN.txt"
+loss_val_dir = "loss/loss_val_celeba_CycleGAN.txt"
 
 num_classes = 3
 input_size = 32
