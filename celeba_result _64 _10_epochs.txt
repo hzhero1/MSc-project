@@ -1,0 +1,115 @@
+1. no augmentation
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[340.,  13.,   9.],
+        [  7., 200.,  12.],
+        [  3.,   5.,  47.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9714, 0.9174, 0.6912])
+Recall         tensor([0.9392, 0.9132, 0.8545])
+F1 Score       tensor([0.9551, 0.9153, 0.7642])
+
+Test Accuracy of the model: 92.29559748427673 %
+
+
+2. traditional augmentation
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[355.,   1.,   6.],
+        [ 21., 186.,  12.],
+        [  6.,   2.,  47.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9293, 0.9841, 0.7231])
+Recall         tensor([0.9807, 0.8493, 0.8545])
+F1 Score       tensor([0.9543, 0.9118, 0.7833])
+
+Test Accuracy of the model: 92.45283018867924 %
+
+
+
+3. DCGAN
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[350.,  10.,   2.],
+        [ 10., 203.,   6.],
+        [  4.,  16.,  35.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9615, 0.8865, 0.8140])
+Recall         tensor([0.9669, 0.9269, 0.6364])
+F1 Score       tensor([0.9642, 0.9062, 0.7143])
+
+Test Accuracy of the model: 92.45283018867924 %
+
+
+
+4.cDCGAN
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[350.,   9.,   3.],
+        [  6., 209.,   4.],
+        [  7.,  14.,  34.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9642, 0.9009, 0.8293])
+Recall         tensor([0.9669, 0.9543, 0.6182])
+F1 Score       tensor([0.9655, 0.9268, 0.7083])
+
+Test Accuracy of the model: 93.23899371069183 %
+
+
+
+5. CycleGan
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[349.,   6.,   7.],
+        [  7., 199.,  13.],
+        [  5.,   5.,  45.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9668, 0.9476, 0.6923])
+Recall         tensor([0.9641, 0.9087, 0.8182])
+F1 Score       tensor([0.9654, 0.9277, 0.7500])
+
+Test Accuracy of the model: 93.23899371069183 %
+
+
+
+6. StarGan
+-----------------------
+Evaluation on test data
+-----------------------
+Confusion matrix:
+ tensor([[347.,   5.,  10.],
+        [  6., 208.,   5.],
+        [  5.,   6.,  44.]])
+
+Per class evaluation: 
+Classes        {'Black_Hair': 0, 'Blond_Hair': 1, 'Gray_Hair': 2}
+Precision      tensor([0.9693, 0.9498, 0.7458])
+Recall         tensor([0.9586, 0.9498, 0.8000])
+F1 Score       tensor([0.9639, 0.9498, 0.7719])
+
+Test Accuracy of the model: 94.18238993710692 %
+
+
+
+
+

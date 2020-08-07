@@ -33,7 +33,7 @@ model_name = 'model_weights/baseline.ckpt'
 # data_dir_val = '../dataset/test_data/eval'
 # data_dir_test = '../dataset/test_data/test'
 
-attribute_name = 'hair_color_cdcgan_aug'
+attribute_name = 'hair_color_stargan_aug'
 
 # CelebA
 data_dir_train = "../dataset/celeba/celeba_subset/" + attribute_name + "/train/"
@@ -41,14 +41,14 @@ data_dir_val = "../dataset/celeba/celeba_subset/" + attribute_name + "/val/"
 data_dir_test = "../dataset/celeba/celeba_subset/" + attribute_name + "/test/"
 
 # Losses directory
-loss_train_dir = "loss/loss_train_celeba_cDCGAN.txt"
-loss_val_dir = "loss/loss_val_celeba_cDCGAN.txt"
+loss_train_dir = "loss/64_loss_train_celeba_stargan.txt"
+loss_val_dir = "loss/64_loss_val_celeba_stargan.txt"
 
 num_classes = 3
-input_size = 32
+input_size = 64
 batch_size = 128
 
-train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_dir_train, data_dir_val, data_dir_val,
+train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_dir_train, data_dir_val, data_dir_test,
                                                                          batch_size, input_size)
 
 # train_loader, val_loader, test_loader, labels_idx = train_val_split(data_dir, 0.2, batch_size, input_size)
@@ -56,7 +56,7 @@ train_loader, val_loader, test_loader, labels_idx = load_split_train_val(data_di
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = SmallVggNet(num_classes).to(device)
 
-num_epochs = 50
+num_epochs = 20
 learning_rate = 0.001
 train_losses, val_losses = [], []
 

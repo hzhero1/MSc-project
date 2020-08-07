@@ -27,8 +27,8 @@ class SmallVggNet(nn.Module):
             nn.Dropout2d(0.3)
         )
 
-        self.fc1 = nn.Sequential(nn.Linear(32 * 8 * 8, 1024),
-                                 nn.Dropout2d(0.5))
+        self.fc1 = nn.Sequential(nn.Linear(32 * 16 * 16, 1024),
+                                 nn.Dropout2d(0.6))
         self.fc2 = nn.Linear(1024, num_classes)
 
         # self.conv3 = nn.Sequential(  # input shape (16, 32, 32)

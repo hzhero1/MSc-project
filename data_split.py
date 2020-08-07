@@ -11,8 +11,8 @@ tar_dir = "../dataset/celeba/celeba_subset/hair_color/test/" + label
 celeba_src_dir = "../dataset/celeba/align_celeba/img_align_celeba"
 celeba_tar_dir = "../dataset/celeba/celeba_subset/subset"
 
-source = "/home/hzhero23/pytorch-CycleGAN-and-pix2pix/results/black2gray_cyclegan/test_latest/fake"
-target = "/home/hzhero23/dataset/celeba/celeba_subset/hair_color_cyclegan_aug/train/Gray_Hair"
+source = "/home/hzhero23/stargan_aug/fake_blond"
+target = "/home/hzhero23/dataset/celeba/celeba_subset/hair_color_stargan_aug/train/Blond_Hair"
 
 #total = len([name for name in os.listdir(src_dir) if os.path.isfile(os.path.join(src_dir, name))])
 #print(total)
@@ -27,11 +27,11 @@ target = "/home/hzhero23/dataset/celeba/celeba_subset/hair_color_cyclegan_aug/tr
 
 total = len([name for name in os.listdir(source) if os.path.isfile(os.path.join(source, name))])
 print(total)
-to_be_moved = random.sample(glob.glob(source + '/*.png'), 1434)
+to_be_moved = random.sample(glob.glob(source + '/*.jpg'), 667)
 
 for f in to_be_moved:
      file_name = os.path.split(f)[1]
 
      if not os.path.exists(target):
          os.makedirs(target)
-     shutil.move(f, target + '/' + file_name)
+     shutil.copy(f, target + '/' + file_name)
