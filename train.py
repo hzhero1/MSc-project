@@ -110,8 +110,8 @@ for epoch in range(1, num_epochs + 1):
 
     train_loss = train_loss / len(train_loader)
     val_loss = val_loss / len(val_loader)
-    train_acc = 100 * correct_train / total_train
-    val_acc = 100 * correct_val / total_val
+    train_acc = correct_train / total_train
+    val_acc = correct_val / total_val
     train_losses.append(train_loss)
     val_losses.append(val_loss)
     train_accs.append(train_acc)
@@ -119,7 +119,7 @@ for epoch in range(1, num_epochs + 1):
 
     print(
         'Epoch: {} \tTraining Loss: {:.6f} \tTraining Accuracy: {:.6f} \tValidation Loss: {:.6f} \tValidation Accuracy: {:.6f}'
-            .format(epoch, train_loss, train_acc, val_loss, val_acc))
+            .format(epoch, train_loss, 100 * train_acc, val_loss, 100 * val_acc))
 
 torch.save(model.state_dict(), model_name)
 
@@ -128,7 +128,7 @@ with open(loss_train_dir, "wb") as f:
 with open(loss_val_dir, "wb") as f:
     pickle.dump(val_losses, f)
 with open(acc_train_dir, "wb") as f:
-        pickle.dump(train_accs, f)
+    pickle.dump(train_accs, f)
 with open(acc_val_dir, "wb") as f:
     pickle.dump(val_accs, f)
 
