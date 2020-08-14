@@ -43,6 +43,8 @@ data_dir_test = "../dataset/celeba/celeba_subset/" + attribute_name + "/test/"
 # Losses directory
 loss_train_dir = "loss/64_loss_train_celeba_stargan.txt"
 loss_val_dir = "loss/64_loss_val_celeba_stargan.txt"
+acc_train_dir = "accuracy/64_acc_train_celeba_stargan.txt"
+acc_val_dir = "accuracy/64_acc_val_celeba_stargan.txt"
 
 num_classes = 3
 input_size = 64
@@ -59,6 +61,7 @@ model = SmallVggNet(num_classes).to(device)
 num_epochs = 20
 learning_rate = 0.001
 train_losses, val_losses = [], []
+train_accs, val_accs = [], []
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
@@ -68,6 +71,9 @@ for epoch in range(1, num_epochs + 1):
     val_loss = 0.0
 
     model.train()
+
+    correct_train = 0
+    total_train = 0
     for data, labels in train_loader:
         data = data.to(device)
         labels = labels.to(device)
@@ -79,10 +85,15 @@ for epoch in range(1, num_epochs + 1):
         optimizer.step()
         train_loss += loss.item() * data.size(0)
 
+        # calculate accuracy
+        _, predicted = torch.max(output.data, 1)
+        total_train += labels.size(0)
+        correct_train += (predicted == labels).sum().item()
+
     model.eval()
 
-    correct = 0
-    total = 0
+    correct_val = 0
+    total_val = 0
     for data, labels in val_loader:
         data = data.to(device)
         labels = labels.to(device)
@@ -92,18 +103,23 @@ for epoch in range(1, num_epochs + 1):
 
         # calculate accuracy
         _, predicted = torch.max(output.data, 1)
-        total += labels.size(0)
-        correct += (predicted == labels).sum().item()
+        total_val += labels.size(0)
+        correct_val += (predicted == labels).sum().item()
 
         val_loss += loss.item() * data.size(0)
 
     train_loss = train_loss / len(train_loader)
     val_loss = val_loss / len(val_loader)
+    train_acc = 100 * correct_train / total_train
+    val_acc = 100 * correct_val / total_val
     train_losses.append(train_loss)
     val_losses.append(val_loss)
+    train_accs.append(train_acc)
+    val_accs.append(val_acc)
 
-    print('Epoch: {} \tTraining Loss: {:.6f} \tValidation Loss: {:.6f} \tValidation Accuracy: {:.6f}'
-          .format(epoch, train_loss, val_loss, 100 * correct / total))
+    print(
+        'Epoch: {} \tTraining Loss: {:.6f} \tTraining Accuracy: {:.6f} \tValidation Loss: {:.6f} \tValidation Accuracy: {:.6f}'
+            .format(epoch, train_loss, train_acc, val_loss, val_acc))
 
 torch.save(model.state_dict(), model_name)
 
@@ -111,6 +127,10 @@ with open(loss_train_dir, "wb") as f:
     pickle.dump(train_losses, f)
 with open(loss_val_dir, "wb") as f:
     pickle.dump(val_losses, f)
+with open(acc_train_dir, "wb") as f:
+        pickle.dump(train_accs, f)
+with open(acc_val_dir, "wb") as f:
+    pickle.dump(val_accs, f)
 
 # test-the-model
 model.eval()  # it-disables-dropout
