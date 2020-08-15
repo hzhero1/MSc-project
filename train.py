@@ -37,16 +37,16 @@ attribute_name = 'hair_color_stargan_aug'
 
 # CelebA
 data_dir_train = "../dataset/celeba/celeba_subset/" + attribute_name + "/train/"
-#data_dir_val = "../dataset/celeba/celeba_subset/" + attribute_name + "/val/"
-#data_dir_test = "../dataset/celeba/celeba_subset/" + attribute_name + "/test/"
-data_dir_val = "/home/hzhero23/celeba_test_different_ratio/celeba_val_test_2/val/"
-data_dir_test = "/home/hzhero23/celeba_test_different_ratio/celeba_val_test_2/test/"
+data_dir_val = "../dataset/celeba/celeba_subset/" + attribute_name + "/val/"
+data_dir_test = "../dataset/celeba/celeba_subset/" + attribute_name + "/test/"
+#data_dir_val = "/home/hzhero23/celeba_test_different_ratio/celeba_val_test_2/val/"
+#data_dir_test = "/home/hzhero23/celeba_test_different_ratio/celeba_val_test_2/test/"
 
 # Losses directory
-loss_train_dir = "loss/2_loss_train_celeba_stargan.txt"
-loss_val_dir = "loss/2_loss_val_celeba_stargan.txt"
-acc_train_dir = "accuracy/2_acc_train_celeba_stargan.txt"
-acc_val_dir = "accuracy/2_acc_val_celeba_stargan.txt"
+loss_train_dir = "loss/0_loss_train_celeba_stargan.txt"
+loss_val_dir = "loss/0_loss_val_celeba_stargan.txt"
+acc_train_dir = "accuracy/0_acc_train_celeba_stargan.txt"
+acc_val_dir = "accuracy/0_acc_val_celeba_stargan.txt"
 
 num_classes = 3
 input_size = 64
