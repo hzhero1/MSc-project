@@ -55,6 +55,6 @@ plt.plot(accs_val_stargan, label='StarGAN')
 
 plt.xticks(np.arange(0, 20), np.arange(1, 21))
 plt.xlabel('Epochs')
-plt.title('Validation accuracy during training')
+plt.title('Group 3')
 plt.legend()
 plt.savefig('group3.png')

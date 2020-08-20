@@ -2,7 +2,6 @@ import os
 import matplotlib.pyplot as plt
 from skimage.transform import resize
 
-# root path depends on your computer
 root = '/home/hzhero23/blond_gray_aug/gray/'
 save_root = '../dataset/resized_celebA/'
 resize_size = 64

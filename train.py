@@ -123,6 +123,8 @@ for epoch in range(1, num_epochs + 1):
         'Epoch: {} \tTraining Loss: {:.6f} \tTraining Accuracy: {:.6f} \tValidation Loss: {:.6f} \tValidation Accuracy: {:.6f}'
             .format(epoch, train_loss, 100 * train_acc, val_loss, 100 * val_acc))
 
+
+# save model weights, training accuracies and losses
 torch.save(model.state_dict(), model_name)
 
 with open(loss_train_dir, "wb") as f:
@@ -134,8 +136,8 @@ with open(acc_train_dir, "wb") as f:
 with open(acc_val_dir, "wb") as f:
     pickle.dump(val_accs, f)
 
-# test-the-model
-model.eval()  # it-disables-dropout
+# test model
+model.eval()  # disables dropout
 confusion_matrix = torch.zeros(num_classes, num_classes)
 with torch.no_grad():
     correct = 0

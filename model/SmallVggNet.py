@@ -6,9 +6,6 @@ import torch.nn.functional as F
 class SmallVggNet(nn.Module):
     def __init__(self, num_classes=True):
         super(SmallVggNet, self).__init__()
-        # self.conv1 = nn.Conv2d(3, 16, kernel_size=(3, 3))
-        # self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
-        # self.conv2 = nn.Conv2d(16, 32, kernel_size=(3, 3))
 
         self.conv1 = nn.Sequential(  # input shape (3, input_size, input_size)
             nn.Conv2d(3, 16, kernel_size=3, padding=1),  # output shape (16, 64, 64)

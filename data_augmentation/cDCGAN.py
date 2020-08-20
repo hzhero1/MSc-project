@@ -9,8 +9,8 @@ target_dir = '/home/hzhero23/dataset/celeba/celeba_subset/hair_color_cdcgan_aug/
 
 num_images = 1434
 
+
 class generator(nn.Module):
-    # initializers
     def __init__(self, d=128):
         super(generator, self).__init__()
         self.deconv1_1 = nn.ConvTranspose2d(100, d * 4, 4, 1, 0)
@@ -26,13 +26,10 @@ class generator(nn.Module):
         self.deconv4_bn = nn.BatchNorm2d(d)
         self.deconv5 = nn.ConvTranspose2d(d, 3, 4, 2, 1)
 
-    # weight_init
     def weight_init(self, mean, std):
         for m in self._modules:
             normal_init(self._modules[m], mean, std)
 
-    # forward method
-    # def forward(self, input):
     def forward(self, input, label):
         x = F.leaky_relu(self.deconv1_1_bn(self.deconv1_1(input)), 0.2)
         y = F.leaky_relu(self.deconv1_2_bn(self.deconv1_2(label)), 0.2)
